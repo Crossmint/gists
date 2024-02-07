@@ -1,7 +1,17 @@
 const options = {
   method: "POST",
-  headers: { "X-API-KEY": "YOUR_API_KEY", "Content-Type": "application/json" },
-  body: '{"metadata":{"name":"Crossmint NFT #1","description":"Awesome NFT #1","image":"ipfs://QmVhAkiT3XCPQUaZKHootfEfixmKVqSiq5Y7uVPZyFGQXw"},"recipient":"email:testy@test.xyz"}',
+  headers: {
+    "X-API-KEY": "YOUR_API_KEY",
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    metadata: {
+      name: "Crossmint NFT #1",
+      description: "Awesome NFT #1",
+      image: "ipfs://QmVhAkiT3XCPQUaZKHootfEfixmKVqSiq5Y7uVPZyFGQXw",
+    },
+    recipient: "email:testy@test.xyz:polygon",
+  }),
 };
 
 fetch(
