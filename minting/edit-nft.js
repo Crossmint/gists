@@ -1,7 +1,3 @@
-const baseUrl = "https://staging.crossmint.com/api";
-const collectionId = "YOUR_COLLECTION_ID";
-const nftId = "YOUR_NFT_ID";
-
 const options = {
   method: "PATCH",
   headers: {
@@ -16,6 +12,10 @@ const options = {
     },
   }),
 };
+
+const baseUrl = "https://staging.crossmint.com/api";
+const collectionId = "YOUR_COLLECTION_ID";
+const nftId = "YOUR_NFT_ID";
 
 fetch(
   `${baseUrl}/2022-06-09/collections/${collectionId}/nfts/${nftId}`,
